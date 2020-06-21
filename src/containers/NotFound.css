@@ -1,0 +1,13 @@
+.NotFound {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.NotFound h2 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+}
+
+.NotFound p {
+    color: #999999
+}
