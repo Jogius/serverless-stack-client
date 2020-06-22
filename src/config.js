@@ -1,16 +1,16 @@
 export default {
     s3: {
-        REGION: "",
-        BUCKET: ""
+        REGION: "us-east-1",
+        BUCKET: "notes-app-uploads-jogius"
     },
     apiGateway: {
-        REGION: "",
-        URL: ""
+        REGION: "us-east-1",
+        URL: "https://yxvt4h89x2.execute-api.us-east-1.amazonaws.com/prod"
     },
     cognito: {
-        REGION: "",
-        USER_POOL_ID: "",
-        APP_CLIENT_ID: "",
-        IDENTITY_POOL_ID: ""
+        REGION: "us-east-1",
+        USER_POOL_ID: "us-east-1_lxZY8QRkt",
+        APP_CLIENT_ID: "7tgqnmvurchvrnf2s5b7e46hic",
+        IDENTITY_POOL_ID: "us-east-1:ea379e1a-746b-4299-8191-09db06af3a1e"
     }
 };

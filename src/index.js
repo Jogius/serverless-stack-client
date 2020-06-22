@@ -25,7 +25,7 @@ Amplify.configure({
     },
     Storage: {
         region: config.s3.REGION,
-        bucket: config.s2.BUCKET,
+        bucket: config.s3.BUCKET,
         identityPoolId: config.cognito.IDENTITY_POOL_ID
     },
     API: {
@@ -38,6 +38,7 @@ Amplify.configure({
         ]
     }
 });
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
