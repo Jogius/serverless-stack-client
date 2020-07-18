@@ -1,8 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import {Navbar, Nav, NavItem} from 'react-bootstrap';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Auth } from 'aws-amplify';
+import { Helmet } from 'react-helmet';
 
 import './App.css';
 import { AppContext } from './libs/contextLib';
@@ -14,6 +15,7 @@ function App() {
     const history = useHistory();
     const [isAuthenticated, userHasAuthenticated] = useState(false);
     const [isAuthenticating, setIsAuthenticating] = useState(true);
+    const color = '#777777';
 
     useEffect(() => {
         onLoad();
@@ -39,9 +41,13 @@ function App() {
         history.push('/login');
     }
 
+
     return (
         !isAuthenticating &&
         <div className='App container'>
+            <Helmet>
+                <style>{`body { background-color: ${color}; }`}</style>
+            </Helmet>
             <Navbar fluid collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
@@ -51,7 +57,12 @@ function App() {
                 <Navbar.Collapse>
                     <Nav pullRight>
                         {isAuthenticated
-                        ? <NavItem onClick={handleLogout}>Logout</NavItem>
+                        ? <>
+                            <LinkContainer to='/settings'>
+                                <NavItem href='/settings'>Settings</NavItem>
+                            </LinkContainer>
+                            <NavItem onClick={handleLogout}>Logout</NavItem>
+                            </>
                             : <>
                             <LinkContainer to='/signup'>
                                 <NavItem href='/signup'>Signup</NavItem>

@@ -1,11 +1,12 @@
 export default {
+    MAX_ATTACHMENT_SIZE: 5000000,
     s3: {
         REGION: "us-east-1",
         BUCKET: "notes-app-uploads-jogius"
     },
     apiGateway: {
         REGION: "us-east-1",
-        URL: "https://yxvt4h89x2.execute-api.us-east-1.amazonaws.com/prod"
+        URL: "https://rjuqo2h8a2.execute-api.us-east-1.amazonaws.com/prod"
     },
     cognito: {
         REGION: "us-east-1",

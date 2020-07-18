@@ -13,4 +13,9 @@
     margin-bottom: 15px;
     display: block;
     font-size: 14px;
+    color: #ffffff;
+}
+
+.Login form a:hover {
+    color: #999999;
 }

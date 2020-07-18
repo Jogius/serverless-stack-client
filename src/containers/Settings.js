@@ -1,5 +1,6 @@
 import { LinkContainer } from 'react-router-bootstrap';
 import LoaderButton from "../components/LoaderButton";
+import React from "react";
 
 export default function Settings() {
     return (
@@ -15,11 +16,12 @@ export default function Settings() {
                 </LoaderButton>
             </LinkContainer>
             <hr/>
-            <StripeProvider stripe={stripe}>
-                <Elements>
-                    <BillingForm isLoading={isLoading} onSubmit={handleFormSubmit}/>
-                </Elements>
-            </StripeProvider>
         </div>
     );
 }
+
+//<StripeProvider stripe={stripe}>
+//    <Elements>
+//        <BillingForm isLoading={isLoading} onSubmit={handleFormSubmit}/>
+//    </Elements>
+//</StripeProvider>

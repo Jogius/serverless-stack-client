@@ -9,6 +9,8 @@ import ChangePassword from "./containers/ChangePassword";
 import ChangeEmail from "./containers/ChangeEmail";
 import Signup from "./containers/Signup";
 import ResendConfirmationEmail from "./containers/ResendConfirmationEmail";
+import Settings from "./containers/Settings";
+import NewNote from "./containers/NewNote";
 
 export default function Routes() {
     return (
@@ -28,11 +30,17 @@ export default function Routes() {
             <Route exact path='/login/reset'>
                 <ResetPassword />
             </Route>
+            <Route exact path='/settings'>
+                <Settings />
+            </Route>
             <Route exact path='/settings/password'>
                 <ChangePassword />
             </Route>
             <Route exact path='/settings/email'>
                 <ChangeEmail />
+            </Route>
+            <Route exact path='/notes/new'>
+                <NewNote />
             </Route>
 
             <Route>

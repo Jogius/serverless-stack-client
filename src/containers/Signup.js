@@ -53,8 +53,8 @@ export default function Signup() {
             setIsLoading(false);
         } catch (e) {   // Catch error
             if (e.name === 'UsernameExistsException') { // If the User already exists
-                alert("User already exists. Log in with your account. Use 'Forgot Password?' if you forgot your password." +
-                    "Use 'Resend verification E-Mail' if your E-Mail Address hasn't been confirmed yet.")
+                alert("User already exists. Try logging in with your account. Use 'Forgot Password?' if you forgot " +
+                    "your password. Use 'Resend verification E-Mail' if your E-Mail Address hasn't been confirmed yet.")
                 history.push('/login');
                 setIsLoading(false);
             } else {
