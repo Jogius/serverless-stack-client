@@ -11,6 +11,7 @@ import Signup from "./containers/Signup";
 import ResendConfirmationEmail from "./containers/ResendConfirmationEmail";
 import Settings from "./containers/Settings";
 import NewNote from "./containers/NewNote";
+import Notes from "./containers/Notes";
 
 export default function Routes() {
     return (
@@ -41,6 +42,9 @@ export default function Routes() {
             </Route>
             <Route exact path='/notes/new'>
                 <NewNote />
+            </Route>
+            <Route exact path='/notes/:id'>
+                <Notes />
             </Route>
 
             <Route>
